@@ -1,0 +1,2154 @@
+/* ╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩ */
+/* Déclaration variable et police */
+:root {
+    /* couleur */
+    --coulAlpha: #90c9e0;
+    --coulBeta: #ecf3e5;
+    --coulDelta: #6247c2;
+    --coulTexte: #333333;
+}
+
+@font-face {
+    font-family: roboto;
+    src: url('../fonts/Roboto-Regular.ttf') format('truetype');
+  }
+
+/* ╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩ */
+/* █▄██▄█ Balise native/générique █▄██▄█ */
+
+body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--coulBeta);
+    color: var(--coulTexte);
+    font-family: 'roboto', sans-serif;
+}
+
+h1 {
+    font-size: 3rem;
+    margin: 15px 0 15px 0;
+}
+
+h2 {
+    font-size: 2rem;
+    margin: 20px 0 20px 0;
+    text-align: center;
+}
+
+h3 {
+    font-size: 1rem;
+    margin: 5px 0 5px 0;
+}
+
+h4 {
+    text-align: center;
+}
+
+input, select, button, textarea, td, th {
+    border: solid 3px var(--coulDelta);
+    background-color: var(--coulBeta);
+    border-radius: 20px;
+    color: var(--coulTexte);
+    text-align: center;
+    padding: 4px;
+}
+
+li {
+    list-style: none;
+    text-align: center;
+}
+
+span {
+    text-align: center;
+}
+
+input[type=submit]:hover,input[type=button]:hover, button:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+
+/* ╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩ */
+/* █▄██▄██▄█ MAIN (Login) █▄██▄██▄█*/
+
+main#containerLogin {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: var(--coulAlpha);
+}
+
+#triangleHaut {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display : inline-block;
+}
+
+div#containerForm {
+    position: relative;
+    width: 55%;
+    height: 55%;
+}
+
+div#triangleForm {
+    display : inline-block;
+}
+
+form#verifLogin {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: hsl(0, 0%, 20%);
+    box-shadow: 0px 0px 5px 5px hsl(0, 0%, 20%);
+}
+
+form#demandeCompte {
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    display: none;
+    width: 100%;
+    height: 100%;
+    color: hsl(0, 0%, 20%);
+    box-shadow: 0px 0px 5px 5px hsl(0, 0%, 20%);
+    animation: animBloc 1.5s linear;
+}
+
+@keyframes animBloc {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+form#demandeCompte img#backLogin {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 20px;
+    cursor: pointer;
+}
+
+form#demandeCompte img#backLogin:hover {transform: scale(1.1);}
+
+form#demandeCompte input[type=submit] {
+    margin: auto;
+    width: 35%;
+}
+
+div#containerForm div.containerDemande {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    margin-top: 10px;
+}
+
+div#containerForm div.containerDemande button {
+    width: 30%;
+    box-shadow: 0px 0px 5px 2px hsl(0, 0%, 20%);
+    margin: 5px 0 5px 0;
+}
+
+form#verifLogin input,
+form#verifLogin label {
+    margin: 10px 0 5px 0;
+    border-radius: 20px;
+    width: 40%;
+    text-align: center;
+} 
+
+form#verifLogin input {
+    box-shadow: 0px 0px 5px 2px hsl(0, 0%, 20%);
+}
+
+form#verifLogin input[type=submit] {
+    margin: 20px 0 0px 0;
+    width: 20%;
+} 
+
+form#demandeCompte h2,
+form#demandeCompte div {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+form#demandeCompte div#containerReponse div#containerInput {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+div#containerReponse div#containerInput label,
+div#containerReponse div#containerInput input {
+    width: 45%; 
+}
+
+div#containerInput label {text-align: center;}
+
+div#containerTextarea textarea {text-align: left;}
+
+
+
+/* ╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩ */
+/* █▄██▄█ HEADER (transféré sur une page PHP) █▄██▄█ */
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    background-color: var(--coulAlpha);
+    border-bottom: solid 3px var(--coulDelta);
+    width: 100%;
+    height: 15%;
+}
+
+header div#containerHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+}
+
+header div#containerHeader div#blocNote,
+header div#containerHeader div#blocNotif {
+    cursor:pointer;
+}
+
+header div#containerHeader div#headerGauche {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 70%;
+}
+
+div.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background-color: var(--coulBeta);
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+img#logo {
+    height: 80px;
+    padding: 5px;
+}
+
+header ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    border-radius: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+header ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    width: 100%;
+    border-radius: 20px;
+    margin: 0px 20px;
+}
+
+a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: var(--coulTexte);
+    border-radius: 20px;
+    padding: 3px;
+}
+
+a:hover {
+    color: var(--coulBeta);
+    background-color: var(--coulDelta);
+}
+
+div.chiffresCles {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 25%;
+    border-radius: 20px;
+}
+
+header div.headerDroit {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 300px;
+}
+
+header div.headerDroit img#profilImg {width: 30px;}
+
+header div.headerDroit p {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 0 0 0;
+}
+
+header div.headerDroit p span {
+    color: var(--coulDelta);
+    margin: 5px 0;
+    font-size: 0.8rem;
+}
+
+header div.headerDroit p span:hover {
+    color: var(--coulBeta);
+    cursor: pointer;
+}
+
+header div#containerHeader img#blocNotif {height: 40px;}
+
+
+
+/* ╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩ */
+/*/* █▄██▄█ MAIN (PLANNING) █▄██▄█ */
+
+main#containerIndex {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 82%;
+    width: 90%;
+    margin-bottom: 10px;
+}
+
+/* Section planning */
+
+main#containerIndex section.planning {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    height: 100%;
+    background-color: var(--coulAlpha);
+    border-radius: 20px;
+}
+
+/* Aside Bloc TAF and Bloc Absent */
+
+main#containerIndex aside, 
+main#containerIndex .blocTafVisible,
+main#containerIndex .blocAbsentVisible {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    right: 0;
+    top: 0;
+    background-color: var(--coulAlpha);
+    height: 100%;
+    width: 400px;
+    border-radius: 20px;
+    border-left: solid 2px var(--coulBeta);
+}
+
+main#containerIndex .blocTafVisible,
+main#containerIndex .blocAbsentVisible {
+    display: flex;
+}
+
+main#containerIndex .blocTafVisible form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 10px 0;
+}
+
+main#containerIndex .blocTafVisible form > input {
+    cursor: pointer;
+}
+
+main#containerIndex aside div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 10px 0;
+}
+
+main#containerIndex .blocTafVisible div img.itemDelete {
+    width: 15px;
+}
+
+main#containerIndex .blocTafVisible div img.itemDelete:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+main#containerIndex .blocAbsentVisible h2,
+main#containerIndex .blocAbsentVisible table {
+    padding: 5px;
+}
+
+main#containerIndex .blocAbsentVisible table tr td,
+main#containerIndex .blocAbsentVisible table tr th {
+    width: 30%;
+    height: 10%;
+}
+
+
+/* Div Haut index */
+
+main#containerIndex div.hautIndex {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+div.hautIndex img {
+    margin: 0 10px 0 10px;
+    width: 50px;
+}
+
+div.hautIndex img:hover {cursor: pointer;}
+
+div.hautIndex img#moisPrecedent {
+    display: none;
+    margin-right: 50px;
+}
+
+div.hautIndex img#moisSuivant {
+    display: none;
+    margin-left: 50px;
+}
+
+div#injectionCodeCal {
+    display: none;
+    position: absolute;
+    top: 106%;
+    left: 0;
+    height: 400px;
+    width: 540px;
+    overflow: hidden;
+    background-color: var(--coulAlpha);
+    border: solid 3px var(--coulDelta);
+    box-sizing: border-box;
+    border-radius: 20px;
+    z-index: 2;
+}
+
+div#injectionCodeCal div#gestionCarroussel {
+    display: flex;
+    height: 400px;
+    width: 1500px;
+    transform: translateX(-1080px);
+}
+
+div.hautIndex form input[type=text] {
+    display: none;
+}
+
+div.hautIndex form input[type=submit] {
+    display: none;
+    height: 50px;
+    width: 50px;
+}
+
+#injectionCodeCal .mois {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 20px;
+}
+
+div.plan {
+  width: 250px;
+  height: 300px;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: var(--coulBeta);
+  border-top: solid 3px var(--coulDelta);
+}
+
+div.jourTexte, div.jourOff, div.jour  {
+  width: 33px;
+  height: 33px;
+  background-color: var(--coulAlpha);
+  margin: 1px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+div.jour:hover {
+    cursor: pointer;
+    background-color: var(--coulDelta);
+    color: var(--coulBeta);
+}
+
+div.jourTexte {background-color: var(--coulBeta);}
+
+div.jourOff {
+    border: none;
+    background-color: var(--coulBeta);
+}
+
+
+/* Div Semaine */
+
+main div.semaine {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 95%;
+    height: 80%;
+    overflow-y: auto;
+    flex-wrap: wrap;
+}
+
+main div.semaine div.blocEntetePlan {
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    background-color: var(--coulBeta);
+    border: solid 3px var(--coulDelta);
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+div.blocEntetePlan > span {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+    height: 30px;
+    box-sizing: border-box;
+}
+
+div.blocEntetePlan span.jourWE {display: none;}
+
+main div.semaine div.blocCreneauHoraire {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--coulBeta);
+    border-radius: 10px;
+    margin-top: 35px;
+    border: solid 3px var(--coulDelta);
+    width: 15%;
+    box-sizing: border-box;
+}
+
+div.blocCreneauHoraire > span {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 30px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+div.blocCreneauHoraire span.heureExt {height: 60px;}
+
+div.semaine div.jour,
+div.semaine div.jourWE {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--fond);
+    border-radius: 10px;
+    margin-top: 35px;
+    width: 15%;
+    height: min-content;
+    color: black;
+}
+
+div.semaine div.jourWE {display: none;}
+
+div.jour span {
+    margin: 5px 0 5px 0;
+    height: 30px;
+}
+
+div.jour div.heureGen,
+div.jour div.heureTop,
+div.jour div.heureBot,
+div.jour div.heureExt {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 30px;
+    width: 100%;
+    background-color: var(--coulBeta);
+    box-sizing: border-box;
+}
+
+div.jour div.heureGen {
+    border-top: solid 3px var(--coulDelta);
+    border-right: solid 3px var(--coulDelta);
+    border-left: solid 3px var(--coulDelta);
+    border-radius: 10px 10px 0 0;
+}
+
+div.jour div.heureTop {
+    border-right: solid 3px var(--coulDelta);
+    border-left: solid 3px var(--coulDelta);
+    border-radius: 0;
+}
+
+div.jour div.heureBot {
+    border-top: solid 3px var(--coulDelta);
+    border-right: solid 3px var(--coulDelta);
+    border-left: solid 3px var(--coulDelta);
+    border-radius: 10px 10px 0 0;
+}
+
+div.jour div.heureExt {
+    height: 60px;
+    border-radius: 10px;
+    border-top: solid 3px var(--coulDelta);
+    border-right: solid 3px var(--coulDelta);
+    border-left: solid 3px var(--coulDelta);
+}
+
+div.jour div.heureExt:last-child {
+    border-bottom: solid 3px var(--coulDelta);
+}
+
+div.jour div.identitePatient,
+div.jour div.identitePatientBeta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    height: 30px;
+}
+
+div.jour div.identitePatient > span,
+div.jour div.identitePatientBeta > span {
+    font-size: 0.7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 2px 0 0;
+}
+
+div.heureGen img.interrupteurPresence,
+div.heureTop img.interrupteurPresence,
+div.heureBot img.interrupteurPresence {
+    height: 20px;
+    width: 30px;
+}
+
+div.blocNouvRdv,
+div.blocAntePostRdv {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    width: 300px;
+    cursor: pointer;
+    background-color: var(--coulBeta);
+    border-radius: 20px;
+    border: solid 3px var(--coulDelta);
+}
+
+div.blocNouvRdv span {font-size: 0.8rem;}
+
+section.planning div.blocNouvRdv img#backNewMeeting,
+section.planning div.blocAntePostRdv img#backNewAntePostMeeting {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 20px;
+    cursor: pointer;
+}
+
+section.planning div.blocNouvRdv img#backNewMeeting:hover,
+section.planning div.blocAntePostRdv img#backNewAntePostMeeting:hover {
+    transform: scale(1.1);
+}
+
+section.planning div.blocNouvRdv form#creneauInjection,
+section.planning div.blocAntepostRdv form#creneauInjectionAntePost {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 60%;
+}
+
+form#creneauInjection,
+form#creneauInjectionAntePost  {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 60%;
+}
+
+form#creneauInjection input[type=text],
+form#creneauInjection input[type=submit],
+form#creneauInjectionAntePost input[type=text],
+form#creneauInjectionAntePost input[type=submit]  {
+    width: 200px;
+    height: 30px;
+    padding: 0; 
+}
+
+form#creneauInjection div.callAutoComp {
+    position: relative; 
+}
+
+form#creneauInjection div.callAutoComp > input  {
+    width: 200px;
+    height: 30px;
+    padding: 0;
+}
+
+form#creneauInjection div#autocompBeta {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 40px;
+    height: 200px;
+    width: 200px;
+    background-color: var(--coulBeta);
+    border-radius: 20px;
+    border: solid 3px var(--coulDelta);
+    overflow: hidden;   
+}
+
+form#creneauInjection div#autocompBeta ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+}
+
+form#creneauInjection div#autocompBeta li {
+    width: 90%;
+    margin: 5px 0;
+}
+
+form#creneauInjection div#autocompBeta li:hover {
+    cursor: pointer;
+    background-color: var(--coulAlpha);
+}
+
+form#creneauInjection div#autocompBeta li > span  {
+    display: none;
+}
+
+form#creneauInjection div.inputRadio {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 200px;
+    height: 80px;
+    padding: 0;
+    border-radius: 20px;
+    background-color: var(--coulBeta);
+    border: solid 3px var(--coulDelta);   
+}
+
+
+/* Section interaction patient */
+
+section.interactionPatient {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 22%;
+    height: 100%;
+    background-color: var(--coulAlpha);
+    border-radius: 20px
+}
+
+section.interactionPatient > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: 15%;
+    background-color: var(--coulBeta);
+    border: solid 3px var(--coulDelta);
+    border-radius: 20px;
+    padding: 6px;
+}
+
+section.interactionPatient div.patientActuel {height: 50%;}
+
+section.interactionPatient h4 {margin: 10px;}
+
+div.boutonActionPatient {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main#containerIndex section#blocModification {
+    position: absolute;
+    display: none;
+    height: 400px;
+    width: 400px;
+    border-radius: 20px;
+    background-color: var(--coulBeta);
+    border: solid 3px var(--coulDelta);
+}
+
+main#containerIndex section#blocModification > div {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    width: 400px;
+}
+
+/* Section blocTestPresence */
+
+section#blocTestPresence {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    width: 400px;
+    border-radius: 20px;
+    background-color: var(--coulBeta);
+    border: solid 3px var(--coulDelta);
+}
+
+section#blocTestPresence img#boutonRetourAbsence {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 20px;
+    cursor: pointer;
+}
+
+section#blocTestPresence div.controle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+
+section#blocTestPresence button {
+    margin: 10px;
+    height: 30px;
+    width: 100px;
+    border-radius: 20px;
+    background-color: var(--coulBeta);
+    border: solid 3px var(--coulDelta);
+}
+
+
+
+/* ╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩ */
+/*/* █▄██▄█ MAIN (ATTENTE) █▄██▄█ */
+
+main#containerAttente {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 85%;
+    border-radius: 20px;
+    width: 90%;
+    margin: 0;
+}
+
+main#containerAttente div.blocTitre {display: flex;}
+
+main#containerAttente div.blocTitre h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main#containerAttente div.blocTitre img {
+    margin: 20px 10px 20px 10px;
+}
+
+/* Attente Partie Haute */
+
+main#containerAttente section.attentePartieHaute {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+    width: 100%;
+    margin: 0 0 0 0;
+    overflow: hidden;
+}
+
+section.attentePartieHaute div#containerListe {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 95%;
+    width: 88%;
+    overflow: hidden;
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+div#containerListe div.gestionListe {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    transition: 0.25s;
+}
+
+div.gestionListe div.client {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    width: 350px;
+    box-sizing: border-box;
+    border: solid 2px var(--coulDelta);
+    border-radius: 20px;
+    margin-right: 80px;
+    background-color: var(--coulAlpha);
+    color: var(--coulTexte);
+    padding: 10px;
+}
+
+div.client > div {width: 100%;}
+
+div.client img#newFileAttente {
+    width: 50px;
+    cursor: pointer;
+}
+
+div.client > div.clientDateContact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    height: 10%;
+    width: 50%;
+    text-align: center;
+    border: 2px solid var(--coulDelta);
+    padding: 5px;
+}
+
+div.clientDateContact h4 {
+    font-weight: bold;
+    margin: 0;
+}
+
+div.client > div.clientBlocA {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10%;
+    border-bottom: 2px solid var(--coulDelta);
+}
+
+div.client > div.clientBlocA span {
+    font-size: 1.2rem;
+}
+
+div.client > div.clientBlocA span:first-child {
+    margin: 0px 5px 0px 5px;
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+div.client > div.clientBlocB {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 35%;
+    border-bottom: 2px solid var(--coulDelta);
+    overflow-y: auto;
+}
+
+div.clientBlocB h4, div.clientBlocC h4, div.clientBlocD h4 {
+    margin: 10px 0 10px 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+div.clientBlocB span,
+div.clientBlocD span {
+    margin-top: 10px;
+}
+
+div.client > div.clientBlocC {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 30%;
+    border-bottom: 2px solid var(--coulDelta);
+    overflow-y: auto;
+}
+
+div.client div.clientBlocC > span {
+    text-align: start;
+}
+
+div.client > div.clientBlocD {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 20%;
+    overflow-y: auto;
+}
+
+section.attentePartieHaute img#listeAttentePrecedent {
+    width: 30px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+section.attentePartieHaute img#listeAttenteSuivant {
+    width: 30px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+section.attentePartieHaute div.gestionListe div.blocAction {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+div.client img.actionSuppression,
+div.client img.actionModify {
+    margin-right: 10px;
+    width: 40px;
+    cursor: pointer;
+}
+
+div.blocAction div.blocControlSupp {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 350px;
+    box-sizing: border-box;
+    border: solid 2px var(--coulDelta);
+    border-radius: 20px;
+    margin-right: 50px;
+    background-color: var(--coulAlpha);
+    color: var(--coulTexte);
+    padding: 10px;
+    z-index: 3;
+}
+
+div.blocAction div.blocControlSuppActive {
+    display: flex;
+}
+
+div.gestionListe div.blocAction div.blocControlSupp img {
+    margin-right: 10px;
+}
+
+div.gestionListe div.blocAction div.blocControlSuppActive span:first-child {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+div.blocAction div.blocControlSuppActive span:not(:first-child) {
+    background-color: var(--coulBeta);
+    width: 50px;
+    height: 20px;
+    border-radius: 20px;
+    margin: 5px 0;
+    border: solid 2px var(--coulDelta);
+}
+
+div.blocAction div.blocControlSuppActive span:not(:first-child):hover {
+    cursor: pointer;
+    background-color: var(--coulDelta);
+    color: var(--coulBeta);
+}
+
+div.blocAction div.blocControlModify {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 350px;
+    box-sizing: border-box;
+    border: solid 2px var(--coulDelta);
+    border-radius: 20px;
+    margin-right: 50px;
+    background-color: var(--coulAlpha);
+    color: var(--coulTexte);
+    padding: 10px;
+}
+
+div.blocAction div.blocControlModifyActive {
+    display: flex;
+}
+
+div.blocAction div.blocControlModifyActive form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+
+div.blocAction div.blocControlModifyActive form input,
+div.blocAction div.blocControlModifyActive form select {
+    width: 80%;
+    height: 10%;
+}
+
+/* Attente Partie Basse */
+
+main#containerAttente .attentePartieBasse {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80%;
+    background-color: var(--coulAlpha);
+    border-radius: 20px;
+    border: solid 3px var(--coulDelta);
+    box-sizing: border-box;
+}
+
+main#containerAttente .attentePartieBasseActive {
+    display: flex;
+}
+
+.attentePartieBasse form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 85%;
+    width: 100%;
+    margin: 5px;
+}
+
+.attentePartieBasse form fieldset {
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.attentePartieBasse form fieldset table {height: 100%;}
+
+.attentePartieBasse form button {
+    margin-top: 5px;
+    width: 150px;
+}
+
+.attentePartieBasse form table {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.attentePartieBasse form table td label,
+.attentePartieBasse form table td input,
+.attentePartieBasse form table td select,
+.attentePartieBasse form table td span,
+.attentePartieBasse form table td textarea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    width: 300px;
+    height: 25px;
+    border: none;
+}
+
+.attentePartieBasse form table td textarea {height: 80px;}
+
+.attentePartieBasse form table td textarea#newCommentaires {
+    width: 600px;
+}
+
+section.attentePartieBasse div.erreurNewAttente {
+    position: absolute;
+    top: 20%;
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--coulBeta);
+    border: 3px solid var(--coulDelta);
+    border-radius: 20px;
+    box-sizing: border-box;
+    width: 600px;
+    height: 400px;
+    overflow-y: auto;
+}
+
+section.attentePartieBasse div.erreurNewAttente > span {
+    width: 90%;
+    list-style: square;
+}
+
+
+
+/* ╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩ */
+/*/* █▄██▄█ MAIN (PATIENT) █▄██▄█ */
+
+main#containerPatient {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--coulAlpha);
+    width: 90%;
+    height: 80%;
+    box-sizing: border-box;
+    border: solid 3px var(--coulDelta);
+    margin: 0 0 10px 0;
+    border-radius: 20px;
+}
+
+/* Patient Partie Haute */
+
+main#containerPatient .patientPartieHaute {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 15%;
+    width: 90%;
+    box-sizing: border-box;
+}
+
+.patientPartieHaute form {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    text-align: center;
+    z-index: 1;
+}
+
+.patientPartieHaute form input,
+.patientPartieHaute button {
+    width: 200px;
+    height: 30px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.patientPartieHaute form div#autocomp {
+    position: absolute;
+    display: none;
+    top: 30px;
+    height: 100px;
+    width: 100%;
+    background-color: var(--coulBeta);
+    border-radius: 20px;
+}
+
+.patientPartieHaute form div#autocomp ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    margin: 0;
+    padding: 0;
+}
+
+.patientPartieHaute form div#autocomp ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 20px;
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.patientPartieHaute form div#autocomp ul li:hover {
+    cursor: pointer;
+    background-color: var(--coulDelta);   
+    color: var(--coulBeta);
+    border-radius: 20px;
+}
+
+.patientPartieHaute form div#autocomp ul li span {
+    visibility: hidden;   
+    height: 0;
+    width: 0;
+}
+
+
+/* Patient Partie Basse */
+
+main#containerPatient .patientPartieBasse {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 85%;
+    width: 90%;
+    box-sizing: border-box;
+    border: solid 3px var(--coulDelta);
+    border-radius: 20px;
+    padding: 10px;
+    margin: 0 0 10px 0;
+}
+
+main#containerPatient .patientPartieBasse img#modifyPatient,
+main#containerPatient .patientPartieBasse img#deletePatient {
+    cursor: pointer;
+}
+
+.patientPartieBasse div.patientEntete {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 14%;
+    border-bottom: solid 3px var(--coulDelta);
+}
+
+div.identiteEnfant > span {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+.patientPartieBasse div.identiteEnfant > img {
+    margin: 0 0 0 20px;
+    width: 50px;
+}
+
+.patientPartieBasse div.patientEntete div.tauxAbsent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--coulBeta);
+    border: solid 3px var(--coulDelta);
+    height: 90%;
+    width: 200px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.patientPartieBasse div.patientCorpsFichier {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;    
+    height: 80%;
+}
+
+div.patientCorpsFichier nav {
+    padding: 0;
+}
+
+div.patientCorpsFichier ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    box-sizing: border-box;
+    margin: 5px 0 5px 0;
+}
+
+div.patientCorpsFichier ul li {
+    margin: 0px 10px;
+    padding: 10px;
+    width: 150px;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+div.patientCorpsFichier ul li.actif {
+    background-color: var(--coulDelta);
+    color: var(--coulBeta);
+    border: solid 3px var(--coulBeta);
+}
+
+div.patientCorpsFichier ul li:hover {
+    cursor: pointer;
+    background-color: var(--coulDelta);
+    color: var(--coulBeta);
+    border: solid 3px var(--coulBeta);
+}
+
+div.patientCorpsFichier div.blocSuivi,
+div.patientCorpsFichier div.blocAssure,
+div.patientCorpsFichier div.blocIdentite,
+div.patientCorpsFichier div.blocPrescription {
+    display: none;
+    width: 100%;
+    height: 80%;
+    margin: 0 0 10px 0;
+    background-color: var(--coulAlpha);
+}
+
+div.patientCorpsFichier div.blocSuivi {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+div.blocSuivi h4 {
+    font-size: 1.5rem;
+    margin: 20px 0 20px 0;
+}
+
+div.blocSuivi table {width: 70%;} 
+
+div.blocSuivi table caption {
+    font-size: 1rem;
+    margin: 10px 0 10px 0;
+    font-weight: bold;
+} 
+
+div.blocSuivi span {
+    font-size: 1rem;
+    margin: 10px 0 10px 0;
+} 
+
+div.blocSuivi table tr th,
+div.blocSuivi table tr td {
+    font-size: 0.9rem;
+}
+
+div.blocIdentite, 
+div.blocAssure,
+div.blocPrescription {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+div.blocIdentite > div,
+div.blocAssure > div,
+div.blocPrescription > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0px 20px;
+    height: 100%;
+    width: 50%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+div.blocIdentite div:last-child,
+div.blocAssure div:last-child,
+div.blocPrescription div:last-child {
+    border-left: solid 3px var(--coulDelta);
+}
+
+div.blocIdentite > div h4,
+div.blocAssure > div h4,
+div.blocPrescription > div h4 {
+    font-size: 1.5rem;
+    margin: 20px 0 10px 0;
+}
+
+div.blocIdentite > div span,
+div.blocAssure > div span,
+div.blocPrescription > div span,
+div.blocPrescription > div div,
+div.blocIdentite > div div {
+    margin: 10px 0 10px 0;
+    font-size: 1rem;
+}
+
+main#containerPatient .patientPartieBasse div.blocDelPatient,
+main#containerPatient .patientPartieBasse div.blocModPatient {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    border: solid 3px var(--coulDelta);
+    background-color: var(--coulAlpha);
+    border-radius: 20px;
+    padding: 10px;
+}
+
+main#containerPatient .patientPartieBasse div.blocDelPatient {
+    justify-content: center;
+}
+
+main#containerPatient .patientPartieBasse div.actif {
+    display: flex;
+}
+
+main#containerPatient .patientPartieBasse div.blocModPatient form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 80%;
+}
+
+.patientPartieBasse div.blocModPatient form input,
+.patientPartieBasse div.blocModPatient form select {
+    width: 400px;
+    height: 40px;
+    box-sizing: border-box;
+}
+
+.patientPartieBasse div.blocModPatient form select.itemModPatientEtab,
+.patientPartieBasse div.blocModPatient form select.itemModPatientMed,
+.patientPartieBasse div.blocModPatient form select.itemModPatientBilan,
+.patientPartieBasse div.blocModPatient form select.itemModPatientActe {
+    display:none;
+}
+
+.patientPartieBasse div.blocDelPatient button {
+    width: 20%;
+    height: 30px;
+    margin-top: 20px;
+}
+
+div.blocMedPresc, div.blocMedTrait, div.blocIdentEtab {
+    position: absolute;
+    bottom: 0;
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 40%;
+    width: 30%;
+    background-color: var(--coulBeta);
+    border: solid 3px var(--coulDelta);
+    overflow-y: auto;
+    padding: 5px;
+}
+
+div.blocPrescriptionMedecin div.actif,
+div.blocIdentiteScolarite div.actif {
+    display: flex;
+}
+
+div.blocPrescriptionMedecin img#infoMedecin,
+div.blocPrescriptionMedecin img#infoMedecinTrait,
+div.blocIdentiteScolarite img#infoEtablissement {
+    width: 15px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+div.blocPrescriptionOrdonnance table {
+    height: 80%;
+    width: 60%;
+    border-spacing: 5px;
+    margin-top: 10px;
+}
+
+div.blocPrescriptionOrdonnance table tr th,
+div.blocPrescriptionOrdonnance table tr td {
+    border-radius: 10px;
+    width: 25%;
+    height: 20px;
+}
+
+div.blocPrescriptionOrdonnance table tr th.transp {
+    opacity: 0;
+}
+
+/* Nouveau patient */
+
+main#containerPatient section.blocNewPatient {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    border: solid 3px var(--coulDelta);
+    background-color: var(--coulAlpha);
+    border-radius: 20px;
+    padding: 10px;
+    margin: 0 0 10px 0;
+    z-index: 1;
+}
+
+section.blocNewPatient div.formNewContainer{
+    position: relative;
+    border: solid 3px var(--coulDelta);
+    border-radius: 20px;
+    box-sizing: border-box;
+    width: 90%;
+    height: 85%; 
+    padding: 10px 20px;
+    text-align: center;
+}
+
+main#containerPatient section.blocNewPatient form {
+    height: 100%;
+    overflow-y: auto;
+}
+
+main#containerPatient section.blocNewPatient form table {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+section.blocNewPatient form table caption {
+    font-size: 1.1rem;
+    margin: 20px 0 20px 0;
+    font-weight: bold;
+}
+
+section.blocNewPatient form table tbody {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+section.blocNewPatient form table tr td,
+section.blocNewPatient form table tr select,
+section.blocNewPatient form table tr input {
+    margin: auto;
+    width: 150px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    box-sizing: border-box;
+}
+
+section.blocNewPatient form table tr td input,
+section.blocNewPatient form table tr td textarea {
+    border: none;
+}
+
+section.blocNewPatient form input[type=submit] {
+    width: 30%;
+    height: 10%;
+    margin: 20px auto 5px auto; 
+}
+
+section.blocNewPatient form td select {
+    width: 90%;
+    border-radius: 0px;
+    border: none;
+}
+
+section.blocNewPatient div.erreurNewPatient {
+    position: absolute;
+    top: 20%;
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: var(--coulBeta);
+    border: 3px solid var(--coulDelta);
+    border-radius: 20px;
+    box-sizing: border-box;
+    width: 400px;
+    height: 400px;
+    overflow-y: auto;
+}
+
+section.blocNewPatient div.erreurNewPatient > span {
+    width: 90%;
+    list-style: square;
+    margin: 10px 0;
+}
+
+section.blocNewPatient div.erreurNewPatient > button {
+    margin: 10px 0;
+}
+
+
+
+/* ╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩ */
+/* █▄██▄██▄█ PAGE 404 █▄██▄██▄█ */
+
+main#page404 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--coulAlpha);
+    border: 3px solid var(--coulBeta);
+    border-radius: 20px;
+    height: 100%;
+    width: 80%;
+}
+
+div.container404 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--coulBeta);
+    border: 3px solid var(--coulDelta);
+    border-radius: 20px;
+    width: 60%;
+    height: 60%;
+}
+
+div.container404 a {
+    width: 50%;
+    height: 10%;
+}
+
+div.container404 a:hover{background-color: var(--coulAlpha);}
+
+
+
+/* ╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩ */
+/* █▄██▄█ ADMIN █▄██▄█ */
+
+main#pageAdmin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--coulAlpha);
+    width: 90%;
+    height: 80%;
+    box-sizing: border-box;
+    border: solid 3px var(--coulDelta);
+    margin: 0 0 10px 0;
+    border-radius: 20px;
+}
+
+section#containerDemandeCompte {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 85%;
+    width: 90%;
+    box-sizing: border-box;
+    border: solid 3px var(--coulDelta);
+    border-radius: 20px;
+    padding: 10px;
+    margin: 0 0 10px 0;
+
+}
+
+section#containerDemandeCompte div.containerVisuel {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    width: 95%;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+section#containerDemandeCompte div#containerItemDemande {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
+    height: 30%;
+    box-sizing: border-box;
+    border: solid 3px var(--coulDelta);
+    background-color: var(--coulBeta);
+    border-radius: 20px;
+    padding: 10px;
+    margin: 0 0 10px 0;
+}
+
+div#containerItemDemande > div   {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border: solid 3px var(--coulDelta);
+    background-color: var(--coulAlpha);
+    border-radius: 20px;
+    width: 60%;
+    height: 90%;
+    padding: 3px;
+}
+
+div#containerItemDemande div#reponse {
+    width: 20%;
+    height: 90%;
+}
+
+div#containerItemDemande div#numero {
+    flex-direction: row;
+    height: 20%;
+    width: 5%;
+}
+
+
+
+/* ╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩ */
+/* █▄██▄█ DOCUMENT █▄██▄█ */
+
+main#pageDocument {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--coulAlpha);
+    width: 90%;
+    height: 80%;
+    box-sizing: border-box;
+    border: solid 3px var(--coulDelta);
+    margin: 0 0 10px 0;
+    border-radius: 20px;
+}
+
+main#pageDocument div.blocTitre {position: relative;}
+
+main#pageDocument div.blocTitre img#newDocument {
+    position: absolute;
+    height: 40px;
+    top: 25%;
+    right: -50px;
+    cursor: pointer;
+}
+
+main#pageDocument section#containerDocument {
+    height: 85%;
+    width: 90%;
+    box-sizing: border-box;
+    border: solid 3px var(--coulDelta);
+    border-radius: 20px;
+    padding: 10px;
+    overflow-x: auto;
+}
+
+section#containerDocument div.containerDocumentAff {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px;
+    overflow-x: auto;
+}
+
+section#containerDocument div.containerDocumentAff div.containerPatient {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    border: solid 3px var(--coulDelta);
+    border-radius: 20px;
+    background-color: var(--coulBeta);
+    padding: 10px;
+    height: 40%;
+    width: 45%;
+    overflow-y: auto;
+    margin: 5px;
+}
+
+main#pageDocument section#containerDocument div.containerPatient h4 {
+    margin : 10px 0;
+}
+
+section#containerDocument div.containerPatient div.containerFile {
+    display: flex;
+}
+
+main#pageDocument section#containerDocument div.containerFile > img {
+    width: 20px;
+}
+
+main#pageDocument section#containerDocument img.folderPatient {
+    margin: 10px;
+}
+
+main#pageDocument section#containerNewDocument {
+    position: relative;
+    display: none;
+    justify-content: space-around;
+    height: 85%;
+    width: 90%;
+    box-sizing: border-box;
+    border: solid 3px var(--coulDelta);
+    border-radius: 20px;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+main#pageDocument section#containerNewDocument form#formNewDocument {
+    position: absolute;
+    top: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    box-sizing: border-box;
+    border: solid 3px var(--coulDelta);
+    border-radius: 20px;
+    background-color: var(--coulBeta);
+    padding: 10px;
+    height: 40%;
+    width: 50%;
+}
+
+
+
+/* ╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩╔╩ */
+/* █▄██▄█ BILAN █▄██▄█ */
+
+main#pageBilan {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--coulAlpha);
+    width: 90%;
+    height: 80%;
+    box-sizing: border-box;
+    border: solid 3px var(--coulDelta);
+    margin: 0 0 10px 0;
+    border-radius: 20px;
+}
+
+main#pageBilan div.blocTitre {position: relative;}
+
+main#pageBilan div.blocTitre img#newDataBilan {
+    position: absolute;
+    height: 40px;
+    top: 25%;
+    right: -50px;
+    cursor: pointer;
+}
+
+main#pageBilan section#containerBilan {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 85%;
+    width: 90%;
+    box-sizing: border-box;
+    border: solid 3px var(--coulDelta);
+    border-radius: 20px;
+    padding: 10px;
+}
+
+main#pageBilan section#containerBilan table {
+    width: 95%;
+    height: 85%;
+    box-sizing: border-box;
+}
+
+main#pageBilan section#containerBilan table caption {
+    margin: 20px 0;
+}
+
+main#pageBilan section#containerBilan table td#tableCharges,
+main#pageBilan section#containerBilan table td#tableProduits {
+    width: 40%;
+    height: 85%;
+    margin: 10px;
+}
+
+main#pageBilan section#containerBilan table td#tableResultat {
+    height: 5%;
+}
+
+section#containerBilan table td div#containerCharges,
+section#containerBilan table td div#containerProduits {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 75%;
+    overflow-x: auto;
+}
+
+div#containerCharges > div,
+div#containerProduits > div {
+    margin: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+div#containerCharges > div > span,
+div#containerProduits > div > span {
+    padding: 10px;
+    text-align: left;
+    width: 30%;
+}
+
+div#containerCharges > div > span:nth-child(3),
+div#containerProduits > div > span:nth-child(3) {
+    text-align: right;
+}
+
+div#containerCharges > div > img,
+div#containerProduits > div > img {
+    height: 15px;
+    cursor: pointer;
+}
+
+div#containerCharges > div > img:hover,
+div#containerProduits > div > img:hover {
+    transform: scale(1.1);
+}
+
+main#pageBilan section#containerBilan div#containerNewBilan {
+    position: absolute;
+    top: 10%;
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+    height: 85%;
+    width: 40%;
+    box-sizing: border-box;
+    background-color: var(--coulBeta);
+    border: solid 3px var(--coulDelta);
+    border-radius: 20px;
+    padding: 10px;
+}
+
+div#containerNewBilan form#newItemBilan {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 90%;
+    width: 70%;
+    padding: 10px;
+    overflow-x: auto;
+}
+
+div#containerNewBilan form#newItemBilan img#backBilan {
+    position: absolute;
+    height: 20px;
+    top: 5%;
+    right: 10px;
+    cursor: pointer;
+}
+
+div#containerNewBilan form#newItemBilan img#backBilan:hover {
+    transform: scale(1.1);
+}
+
+div#containerNewBilan form#newItemBilan > input {
+    width: 90%;
+}
+
+div#containerNewBilan form#newItemBilan > input[type=submit] {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+div#containerNewBilan form#newItemBilan span {
+    font-size: 0.8rem;
+}
+
+div#containerDelBilan {display: none;}

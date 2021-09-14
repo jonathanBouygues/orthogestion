@@ -1,0 +1,9 @@
+File to save the IP's log error  :
+
+1589101452 - statut : KO - Remote Addr : 176.141.243.139 - Remote Port : 39174
+1589101640 - statut : KO - Remote Addr : 93.23.106.65 - Remote Port : 43086
+1589193111 - statut : KO - Remote Addr : 176.135.181.245 - Remote Port : 55840
+1589193124 - statut : KO - Remote Addr : 176.135.181.245 - Remote Port : 56254
+1589193144 - statut : KO - Remote Addr : 176.141.243.139 - Remote Port : 56538
+1589206392 - statut : KO - Remote Addr : 86.250.15.203 - Remote Port : 34772
+1596121591 - statut : KO - Remote Addr : ::1 - Remote Port : 61048

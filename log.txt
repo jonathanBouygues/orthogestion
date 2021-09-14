@@ -1,0 +1,60 @@
+File to save the request's error in PDO :
+1589357147 - KO - INSERT INTO `planning_creneau` (`plan_id`,`plan_nom`) VALUES ('2020/05/12 - 9:15','')
+1589357147 - KO - INSERT INTO `planning_creneau` (`plan_id`,`plan_nom`) VALUES ('2020/05/12 - 9:30','')
+1589358120 - KO - UPDATE `liste_patient` SET `pat_suivi_seanceNbreRealise` ='1' WHERE pat_num = '3' AND pat_archive IS NULL
+1589358194 - KO - UPDATE `liste_patient` SET `pat_suivi_seanceNbreRealise` ='2' WHERE pat_num = '3' AND pat_archive IS NULL
+1589358194 - KO - UPDATE `liste_patient` SET `pat_suivi_seanceNbreRealise` ='2' WHERE pat_num = '3' AND pat_archive IS NULL
+1589358194 - KO - UPDATE `liste_patient` SET `pat_suivi_seanceNbreRealise` ='2' WHERE pat_num = '3' AND pat_archive IS NULL
+1589358194 - KO - UPDATE `liste_patient` SET `pat_suivi_seanceNbreRealise` ='3' WHERE pat_num = '3' AND pat_archive IS NULL
+1589358430 - KO - UPDATE `liste_patient` SET `pat_suivi_seanceNbreRealise` ='4' WHERE pat_num = '3' AND pat_archive IS NULL
+1589358430 - KO - UPDATE `liste_patient` SET `pat_suivi_seanceNbreRealise` ='4' WHERE pat_num = '3' AND pat_archive IS NULL
+1589358430 - KO - UPDATE `liste_patient` SET `pat_suivi_seanceNbreRealise` ='4' WHERE pat_num = '3' AND pat_archive IS NULL
+1589358430 - KO - UPDATE `liste_patient` SET `pat_suivi_seanceNbreRealise` ='4' WHERE pat_num = '3' AND pat_archive IS NULL
+1589358430 - KO - UPDATE `liste_patient` SET `pat_suivi_seanceNbreRealise` ='4' WHERE pat_num = '3' AND pat_archive IS NULL
+1589358430 - KO - UPDATE `liste_patient` SET `pat_suivi_seanceNbreRealise` ='5' WHERE pat_num = '3' AND pat_archive IS NULL
+1589358430 - KO - UPDATE `liste_patient` SET `pat_suivi_seanceNbreRealise` ='5' WHERE pat_num = '3' AND pat_archive IS NULL
+1589358430 - KO - UPDATE `liste_patient` SET `pat_suivi_seanceNbreRealise` ='5' WHERE pat_num = '3' AND pat_archive IS NULL
+1589358430 - KO - UPDATE `liste_patient` SET `pat_suivi_seanceNbreRealise` ='5' WHERE pat_num = '3' AND pat_archive IS NULL
+1589358430 - KO - UPDATE `liste_patient` SET `pat_suivi_seanceNbreRealise` ='5' WHERE pat_num = '3' AND pat_archive IS NULL
+1589358430 - KO - UPDATE `liste_patient` SET `pat_suivi_seanceNbreRealise` ='5' WHERE pat_num = '3' AND pat_archive IS NULL
+1589358980 - KO - UPDATE `liste_patient` SET `pat_suivi_seanceNbreRealise` ='2' WHERE pat_num = '3' AND pat_archive IS NULL
+1589358980 - KO - UPDATE `liste_patient` SET `pat_suivi_seanceNbreRealise` ='2' WHERE pat_num = '3' AND pat_archive IS NULL
+1589359036 - KO - UPDATE `liste_patient` SET `pat_suivi_seanceNbreRealise` ='3' WHERE pat_num = '3' AND pat_archive IS NULL
+1589359036 - KO - UPDATE `liste_patient` SET `pat_suivi_seanceNbreRealise` ='3' WHERE pat_num = '3' AND pat_archive IS NULL
+1589359036 - KO - UPDATE `liste_patient` SET `pat_suivi_seanceNbreRealise` ='4' WHERE pat_num = '3' AND pat_archive IS NULL
+1589359036 - KO - UPDATE `liste_patient` SET `pat_suivi_seanceNbreRealise` ='5' WHERE pat_num = '3' AND pat_archive IS NULL
+1589359036 - KO - UPDATE `liste_patient` SET `pat_suivi_seanceNbreRealise` ='5' WHERE pat_num = '3' AND pat_archive IS NULL
+1589359118 - KO - UPDATE `liste_patient` SET `pat_suivi_seanceNbreRealise` ='4' WHERE pat_num = '1' AND pat_archive IS NULL
+1589359181 - KO - UPDATE `liste_patient` SET `pat_suivi_seanceNbreRealise` ='3' WHERE pat_num = '1' AND pat_archive IS NULL
+1589359181 - KO - UPDATE `liste_patient` SET `pat_suivi_seanceNbreRealise` ='5' WHERE pat_num = '3' AND pat_archive IS NULL
+1589359181 - KO - UPDATE `liste_patient` SET `pat_suivi_seanceNbreRealise` ='6' WHERE pat_num = '3' AND pat_archive IS NULL
+1589359181 - KO - UPDATE `liste_patient` SET `pat_suivi_seanceNbreRealise` ='6' WHERE pat_num = '3' AND pat_archive IS NULL
+1589359932 - KO - UPDATE `liste_patient` SET `pat_suivi_seanceNbreRealise` ='1' WHERE pat_num = '1' AND pat_archive IS NULL
+1589359932 - KO - UPDATE `liste_patient` SET `pat_suivi_seanceNbreRealise` ='3' WHERE pat_num = '3' AND pat_archive IS NULL
+1589359932 - KO - UPDATE `liste_patient` SET `pat_suivi_seanceNbreRealise` ='3' WHERE pat_num = '3' AND pat_archive IS NULL
+1589359932 - KO - UPDATE `liste_patient` SET `pat_suivi_seanceNbreRealise` ='3' WHERE pat_num = '3' AND pat_archive IS NULL
+1589359932 - KO - UPDATE `liste_patient` SET `pat_suivi_seanceNbreRealise` ='4' WHERE pat_num = '3' AND pat_archive IS NULL
+1589359932 - KO - UPDATE `liste_patient` SET `pat_suivi_seanceNbreRealise` ='4' WHERE pat_num = '3' AND pat_archive IS NULL
+1589359932 - KO - UPDATE `liste_patient` SET `pat_suivi_seanceNbreRealise` ='4' WHERE pat_num = '3' AND pat_archive IS NULL
+1589359932 - KO - UPDATE `liste_patient` SET `pat_suivi_seanceNbreRealise` ='4' WHERE pat_num = '3' AND pat_archive IS NULL
+1589360495 - KO - UPDATE `liste_patient` SET `pat_suivi_seanceNbreRealise` ='3' WHERE pat_num = '3' AND pat_archive IS NULL
+1589360495 - KO - UPDATE `liste_patient` SET `pat_suivi_seanceNbreRealise` ='4' WHERE pat_num = '3' AND pat_archive IS NULL
+1589360495 - KO - UPDATE `liste_patient` SET `pat_suivi_seanceNbreRealise` ='4' WHERE pat_num = '3' AND pat_archive IS NULL
+1589360591 - KO - UPDATE `liste_patient` SET `pat_suivi_seanceNbreRealise` ='3' WHERE pat_num = '3' AND pat_archive IS NULL
+1589360591 - KO - UPDATE `liste_patient` SET `pat_suivi_seanceNbreRealise` ='3' WHERE pat_num = '3' AND pat_archive IS NULL
+1589360591 - KO - UPDATE `liste_patient` SET `pat_suivi_seanceNbreRealise` ='3' WHERE pat_num = '3' AND pat_archive IS NULL
+1589360591 - KO - UPDATE `liste_patient` SET `pat_suivi_seanceNbreRealise` ='4' WHERE pat_num = '3' AND pat_archive IS NULL
+1589360591 - KO - UPDATE `liste_patient` SET `pat_suivi_seanceNbreRealise` ='4' WHERE pat_num = '3' AND pat_archive IS NULL
+1589360591 - KO - UPDATE `liste_patient` SET `pat_suivi_seanceNbreRealise` ='4' WHERE pat_num = '3' AND pat_archive IS NULL
+1589360591 - KO - UPDATE `liste_patient` SET `pat_suivi_seanceNbreRealise` ='4' WHERE pat_num = '3' AND pat_archive IS NULL
+1589362470 - KO - INSERT INTO `planning_creneau` (`plan_id`,`plan_nom`) VALUES ('2020/05/13 - 9:00','')
+1589362470 - KO - INSERT INTO `planning_creneau` (`plan_id`,`plan_nom`) VALUES ('2020/05/13 - 9:15','')
+1589362470 - KO - UPDATE `liste_patient` SET `pat_suivi_seanceNbreRealise` ='' WHERE pat_num = '3' AND pat_archive IS NULL
+1589362470 - KO - UPDATE `liste_patient` SET `pat_suivi_seanceNbreRealise` ='5' WHERE pat_num = '' AND pat_archive IS NULL
+1589362943 - KO - INSERT INTO `planning_creneau` (`plan_id`,`plan_nom`) VALUES ('2020/05/13 - 9:00','')
+1589362943 - KO - INSERT INTO `planning_creneau` (`plan_id`,`plan_nom`) VALUES ('2020/05/13 - 9:15','')
+1589362943 - KO - UPDATE `liste_patient` SET `pat_suivi_seanceNbreRealise` ='' WHERE pat_num = '1' AND pat_archive IS NULL
+1589363115 - KO - INSERT INTO `planning_creneau` (`plan_id`,`plan_nom`) VALUES ('2020/05/13 - 9:00','')
+1589363115 - KO - INSERT INTO `planning_creneau` (`plan_id`,`plan_nom`) VALUES ('2020/05/13 - 9:15','')
+1589967159 - KO - INSERT INTO `planning_creneau` (`plan_id`,`plan_nom`) VALUES ('2020/05/20 - 9:15','')
+1589967159 - KO - INSERT INTO `planning_creneau` (`plan_id`,`plan_nom`) VALUES ('2020/05/20 - 9:30','')

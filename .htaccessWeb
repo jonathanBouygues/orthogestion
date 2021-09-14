@@ -1,0 +1,31 @@
+#le serveur doit suivre les liens symboliques
+Options +FollowSymlinks
+
+# restrictive access
+# Deny from all
+
+# Don't see the links/files
+Options All -Indexes
+
+# Directives 404
+ErrorDocument 404 /php/erreur404.php
+
+# HTTPS redirection
+RewriteCond %{HTTPS} off
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
+
+
+# Réécriture d'URL
+RewriteEngine On
+RewriteBase /
+
+#Regles de réécriture des pages visibles
+#RewriteRule ^connexion$ index.php [L]
+#RewriteRule ^planning$ /php/planning.php [L]
+#RewriteRule ^patient$ /php/patient.php [L]
+#RewriteRule ^erreur404$ /php/erreur404.php [L]
+#RewriteRule ^courrier$ /php/courrier.php [L]
+#RewriteRule ^compta$ /php/compta.php [L]
+#RewriteRule ^bilan$ /php/bilan.php [L]
+#RewriteRule ^attente$ /php/attente.php [L]
+#RewriteRule ^admin$ /php/admin.php [L]

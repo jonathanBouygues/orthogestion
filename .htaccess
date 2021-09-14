@@ -1,0 +1,17 @@
+#le serveur doit suivre les liens symboliques
+Options +FollowSymlinks
+
+# Don't see the links/files
+Options All -Indexes
+
+# Directives 404
+ErrorDocument 404 /php/erreur404.php
+
+# Réécriture d'URL
+RewriteEngine On
+RewriteBase /
+
+# HTTPS redirection
+# RewriteCond %{HTTPS} off
+# RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
+
